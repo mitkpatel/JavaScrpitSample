@@ -72,3 +72,53 @@ var object = {
 var name = object.name;
 var friend = object.friends[0];
 console.log("Name: " + name + "\tFriends: "+friend);
+
+var objectAdd = {
+    "name": "Mit",
+    "Height": 175,
+    "weight": 70,
+    "friends": ["everything!", "one", "two"]
+};
+objectAdd['address'] = "Chilhodra";
+console.log("after adding variable to object: " +objectAdd['address']);
+
+//delete property in object
+delete objectAdd.address;
+console.log("after deleting variable to object: " +objectAdd['address']);
+
+
+function returnName(val) {
+
+    var object = {
+        "name": "Mit",
+        "Height": 175,
+        "weight": 70,
+        "friends": ["everything!", "one", "two"],
+        "address": "anand"
+    };
+
+    return object[val];
+}
+
+console.log("Get address from function with object: "+returnName("address"));
+
+var myPlant = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "sunflower",
+            "tulip"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+
+console.log("Tree: " +myPlant[1].list[1]);
